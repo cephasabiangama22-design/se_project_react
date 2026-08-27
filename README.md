@@ -55,6 +55,8 @@ The application was created based on a provided Figma design. The Figma design w
 
 ## final project deployment link
 
+https://github.com/cephasabiangama22-design/se_project_react.git
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
