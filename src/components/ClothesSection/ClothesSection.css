@@ -1,0 +1,36 @@
+.clothes-section {
+  flex-grow: 1;
+  gap: 116px;
+}
+
+.clothes-section__row {
+  display: flex;
+}
+
+.clothes-section__item {
+  display: flex;
+  gap: 21px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clothes-section__title {
+  margin-right: 20px;
+  font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.clothes-section__btn {
+  color: #00000099;
+  border: none;
+  font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+}
