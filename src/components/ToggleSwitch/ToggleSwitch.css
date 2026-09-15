@@ -1,0 +1,54 @@
+.toggle-switch {
+  width: 56px;
+  height: 28px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px 0 auto;
+}
+
+.toggle-switch__checkbox {
+  opacity: 0;
+}
+
+.toggle-switch__circle {
+  background-color: black;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.toggle-switch__text {
+  color: #00000080;
+  position: absolute;
+  top: 5px;
+}
+
+.toggle-switch__text_f {
+  left: 9px;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.toggle-switch__text_c {
+  right: 9px;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.toggle-switch__checkbox:checked ~ .toggle-switch__circle {
+  transform: translateX(28px);
+}
+
+.toggle-switch__text_color_white {
+  color: white;
+}

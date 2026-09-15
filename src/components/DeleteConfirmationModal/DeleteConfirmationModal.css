@@ -1,0 +1,55 @@
+.modal__delete-confirmation {
+  background-color: #ffffff;
+  max-width: 670px;
+  width: 100%;
+  height: 280px;
+  text-align: center;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.close__btn-icon {
+  width: 20px;
+  position: absolute;
+  right: 60px;
+  left: -3px;
+  cursor: pointer;
+}
+
+.modal__delete-text {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.Modal__delete-btn {
+  display: flex;
+  flex-direction: column;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 40px;
+}
+
+.modal__confirm-delete {
+  margin-bottom: 24px;
+  color: #ff4d00;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal__cancel-delete {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 60px;
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 20px;
+  line-height: 24px;
+}
