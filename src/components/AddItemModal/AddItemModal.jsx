@@ -1,7 +1,7 @@
 import { useForm } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function AddItemModal({ isOpen, onAdditem, onClose }) {
+function AddItemModal({ isOpen, onAddItem, onClose }) {
   const defaultValues = {
     name: "",
     imageUrl: "",
@@ -12,7 +12,7 @@ function AddItemModal({ isOpen, onAdditem, onClose }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    onAdditem(values);
+    onAddItem(values);
   }
 
   return (

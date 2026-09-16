@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./App.css";
-import { coordinates, APikey } from "../../utils/constants";
+import { coordinates, apiKey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Profile from "../Profile/Profile";
@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
-import CurrentTemperatureUnitContext from "../Context/CurrentTemperatureUnitContext";
+import CurrentTemperatureUnitContext from "../../Context/CurrentTemperatureUnitContext";
 import { getItems, addItem, deleteItem } from "../../utils/api";
 import { DeleteConfirmationModal } from "../DeleteConfirmationModal/DeleteConfirmationModal";
 
@@ -75,7 +75,7 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, APikey)
+    getWeather(coordinates, apiKey)
       .then((data) => {
         const filterData = filterWeatherData(data);
         setWeatherData(filterData);
@@ -110,11 +110,12 @@ function App() {
             />
 
             <Route
-              path="/Profile"
+              path="/profile"
               element={
                 <Profile
                   clothingItems={clothingItems}
                   onCardClick={handleCardClick}
+                  handleAddClick={handleAddClick}
                 />
               }
             />

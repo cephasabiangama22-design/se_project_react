@@ -49,18 +49,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jeans.png?etag=58345e8bef1ce5f95ac882e71d309e6c"
     },
     {
-      "_id": 10,
-      "name": "Scarf",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Scarf.png?etag=74efbee93810c926b5507e862c6cb76c"
-    },
-    {
-      "_id": 11,
-      "name": "Shorts",
-      "weather": "Hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba"
-    },
-    {
       "name": "Black Lion",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
       "weather": "cold",
@@ -83,18 +71,6 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
       "weather": "cold",
       "_id": 20
-    },
-    {
-      "name": "Black Lion",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
-      "weather": "hot",
-      "_id": 21
-    },
-    {
-      "name": "Black Lion",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
-      "weather": "warm",
-      "_id": 22
     }
   ]
 }
