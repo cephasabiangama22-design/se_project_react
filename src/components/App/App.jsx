@@ -127,7 +127,7 @@ function App() {
         <AddItemModal
           isOpen={activeModal}
           onClose={closeActiveModal}
-          onAdditem={onAddItem}
+          onAddItem={onAddItem}
         />
         <ItemModal
           activeModal={activeModal}

@@ -59,18 +59,6 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
       "weather": "warm",
       "_id": 18
-    },
-    {
-      "name": "Black Lion",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
-      "weather": "warm",
-      "_id": 19
-    },
-    {
-      "name": "Black Lion",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKHLyHkCVVInYIu5PKCR8f5I38l8flZlhvv9PRTa-Sw&s=10",
-      "weather": "cold",
-      "_id": 20
     }
   ]
 }
