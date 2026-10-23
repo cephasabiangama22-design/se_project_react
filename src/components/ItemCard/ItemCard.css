@@ -1,14 +1,15 @@
 .card {
-  width: 323px;
-  height: 328px;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  border: 1px solid #0000004d;
+  border-radius: 20px;
 }
 
 .card__name {
-  position: absolute;
-  top: 15px;
   background-color: #fff;
   margin: 0;
   font-family: "CabinetGrotesk-Bold";
@@ -18,8 +19,33 @@
   border-radius: 4px;
   padding: 2px 12px;
 }
+.card__header {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  align-items: center;
+}
 .card__image {
-  border: 1px solid #0000004d;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: fill;
+
+  border-radius: 20px;
   width: 100%;
+}
+
+.card__like-button {
+  color: red;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.like__default-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
 }

@@ -1,7 +1,7 @@
 import "./SideBar.css";
 import sideBarAvatar from "../../assets/sidebar-avatar.png";
 
-function SideBar() {
+function SideBar({ handleSignOut }) {
   return (
     <aside className="sidebar">
       <div className="sidebar__profile">
@@ -11,6 +11,16 @@ function SideBar() {
           className="sidebar__avatar"
         />
         <p className="sidebar__username">Terrence Tegegne</p>
+      </div>
+      <div className="sidebar__page">
+        <p className="sidebar__change-profile">Change profile data</p>
+        <button
+          type="button"
+          className="sidebar__signout-btn"
+          onClick={handleSignOut}
+        >
+          Log out
+        </button>
       </div>
     </aside>
   );

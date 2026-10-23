@@ -20,3 +20,18 @@
   font-size: 20px;
   line-height: 100%;
 }
+
+.sidebar__signout-btn {
+  border: none;
+  color: #000000;
+  font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: transparent;
+}
+
+.sidebar__change-profile {
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 16px;
+}
