@@ -62,7 +62,7 @@ const Register = ({
         placeholder="Password"
         type="password"
         className="register__input"
-        value={data.passowrd}
+        value={data.password}
         onChange={handleChange}
       />
 
@@ -71,7 +71,7 @@ const Register = ({
       </label>
       <input
         id="name"
-        name="name"
+        name="registration"
         placeholder="Name"
         type="text"
         className="register__input"

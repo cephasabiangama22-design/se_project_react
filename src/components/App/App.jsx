@@ -24,6 +24,7 @@ import EditProfileModal from "../EditProfileModal/EditProfileModal";
 import Login from "../LoginModal/Login";
 import * as auth from "../../utils/auth";
 import Register from "../RegisterModal/Register";
+import ProtectedRoute from "../ProtectedRoute/PotectedRoute";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -39,7 +40,6 @@ function App() {
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
 
   const handleToggleSwitchChange = () => {
     setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
@@ -83,7 +83,7 @@ function App() {
     updateUser(userData, token)
       .then((updateUser) => {
         setCurrentUser(updateUser);
-        closeActiveModal;
+        closeActiveModal();
       })
       .catch(console.error);
   };
@@ -133,6 +133,7 @@ function App() {
         setCurrentUser(userData);
         setIsLoggedIn(true);
         closeActiveModal();
+        navigate("/");
       })
       .catch(console.error);
   }
@@ -174,7 +175,7 @@ function App() {
     setActiveModal("register");
   }
 
-  function handleSignOutClick() {
+  function handleEditProfileClick() {
     setActiveModal("EditProfileModal");
   }
 
@@ -188,10 +189,28 @@ function App() {
 
     getItems()
       .then((data) => {
-        setClothingItems(data);
-        data.reverse();
+        setClothingItems([...data].reverse());
       })
       .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    const token = localStorage.getItem("jwt");
+
+    if (token) {
+      auth
+        .validate(token)
+        .then((userData) => {
+          setCurrentUser(userData);
+          setIsLoggedIn(true);
+        })
+        .catch((err) => {
+          console.error(err);
+          localStorage.removeItem("jwt");
+          setCurrentUser({});
+          setIsLoggedIn(false);
+        });
+    }
   }, []);
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -225,12 +244,15 @@ function App() {
               <Route
                 path="/profile"
                 element={
-                  <Profile
-                    clothingItems={clothingItems}
-                    onCardClick={handleCardClick}
-                    handleAddClick={handleAddClick}
-                    handleSignOut={handleSignOut}
-                  />
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
+                    <Profile
+                      clothingItems={clothingItems}
+                      onCardClick={handleCardClick}
+                      handleAddClick={handleAddClick}
+                      handleSignOut={handleSignOut}
+                      onEditProfile={handleEditProfileClick}
+                    />
+                  </ProtectedRoute>
                 }
               />
             </Routes>

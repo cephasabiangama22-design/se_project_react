@@ -31,6 +31,7 @@ const Login = ({ handleLogin, onClose, isOpen, handleRegisterClick }) => {
       buttonText={"Log In"}
       buttonName={"or Sign Up"}
       buttonClassName={"register__submit-btn"}
+      onSecondaryClick={handleRegisterClick}
     >
       <label htmlFor="email" className="modal__login">
         Email:

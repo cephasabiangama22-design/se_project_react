@@ -29,7 +29,7 @@ function AddItemModal({ isOpen, onAddItem, onClose }) {
         Name
         <input
           type="text"
-          name="name"
+          name="additem-name)"
           className="modal__input"
           id="name"
           placeholder="Name"

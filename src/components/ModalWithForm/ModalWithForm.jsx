@@ -11,6 +11,7 @@ function ModalWithForm({
   onClose,
   name,
   onSubmit,
+  onSecondaryClick,
 }) {
   return (
     <div
@@ -30,11 +31,15 @@ function ModalWithForm({
           <div className="modal__button-container">
             <button
               type="submit"
-              className={`"modal__submit-btn" ${buttonClassName || ""}`}
+              className={`modal__submit-btn ${buttonClassName || ""}`}
             >
               {buttonText}
             </button>
-            <button type="button" className="modal__orlogin-btn">
+            <button
+              onClick={onSecondaryClick}
+              type="button"
+              className="modal__orlogin-btn"
+            >
               {buttonName}
             </button>
           </div>
