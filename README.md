@@ -93,6 +93,7 @@ The goal was to make the finished application closely match the original design 
 ## Final Project Deployment Link
 
 [GitHub Repository](https://github.com/cephasabiangama22-design/se_project_react.git)
+[GitHub backend Repository](https://github.com/cephasabiangama22-design/se_project_express.git)
 
 ## React + Vite
 
