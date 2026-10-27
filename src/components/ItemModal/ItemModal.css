@@ -3,8 +3,6 @@
   padding: 0;
   border-radius: 16px;
   width: 498px;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .modal__bottom-container {
