@@ -251,6 +251,8 @@ function App() {
                       handleAddClick={handleAddClick}
                       handleSignOut={handleSignOut}
                       onEditProfile={handleEditProfileClick}
+                      onCardLike={handleCardLike}
+                      isLoggedIn={isLoggedIn}
                     />
                   </ProtectedRoute>
                 }

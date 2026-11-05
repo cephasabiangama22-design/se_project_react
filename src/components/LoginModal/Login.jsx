@@ -1,25 +1,18 @@
-import { useState } from "react";
+import { useForm } from "../../hooks/useForm";
 import "./login.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const Login = ({ handleLogin, onClose, isOpen, handleRegisterClick }) => {
-  const [data, setData] = useState({
+  const defaultValues = {
     email: "",
     password: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setData({
-      ...data,
-      [name]: value,
-    });
   };
+
+  const { values, handleChange } = useForm(defaultValues);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin(data);
+    handleLogin(values);
   };
 
   return (
@@ -43,7 +36,7 @@ const Login = ({ handleLogin, onClose, isOpen, handleRegisterClick }) => {
         placeholder="email"
         className="login__input"
         id="email"
-        value={data.email}
+        value={values.email}
         onChange={handleChange}
       />
       <label htmlFor="password" className="modal__login">
@@ -56,7 +49,7 @@ const Login = ({ handleLogin, onClose, isOpen, handleRegisterClick }) => {
         name="password"
         placeholder="password"
         className="login__input"
-        value={data.password}
+        value={values.password}
         onChange={handleChange}
       />
     </ModalWithForm>

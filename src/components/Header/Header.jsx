@@ -41,11 +41,17 @@ function Header({
           <NavLink className="header__navlink" to="/profile">
             <div className="header__user-container">
               <p className="header__username">{currentUser.name}</p>
-              <img
-                src={currentUser.avatar}
-                alt={currentUser.name}
-                className="header__Avatar"
-              />
+              {currentUser.avatar ? (
+                <img
+                  src={currentUser.avatar}
+                  alt={currentUser.name || "User"}
+                  className="header__Avatar"
+                />
+              ) : (
+                <div className="header__avatar-placeholder">
+                  {currentUser.name?.charAt(0).toUpperCase() || "?"}
+                </div>
+              )}
             </div>
           </NavLink>{" "}
         </>
