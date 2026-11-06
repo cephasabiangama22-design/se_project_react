@@ -185,4 +185,9 @@ export const coordinates = {
   longitude: -86.6161849,
 };
 
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr.wild1.net"
+    : "http://localhost:3001";
+
 export const apiKey = "e20fd13e99319a2f541c98678a2962f4";
