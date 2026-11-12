@@ -16,7 +16,7 @@ const Register = ({
     avatar: "",
   };
 
-  const { values, handleChange } = useForm(defaultValues);
+  const { values, handleChange, setValues } = useForm(defaultValues);
 
   useEffect(() => {
     if (isOpen) {

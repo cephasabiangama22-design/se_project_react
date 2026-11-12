@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://wtwr.wild1.net",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "nom run build && scp -r ./dist/* cepwatchcm@wtwr.wild1.net:/home/cepwatchcm/frontend"
   },
   "dependencies": {
     "react": "^18.3.1",
