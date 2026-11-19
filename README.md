@@ -103,10 +103,8 @@ Vite provides a fast development environment with Hot Module Replacement (HMR), 
 
 The project also uses ESLint to help maintain consistent JavaScript and React code.
 
-## Project Pitch Video
+## Project Pitch Video the new upadated one
 
 **Loom Video**
 
 (https://www.loom.com/share/9bb3cab640a64ff495f08fbffb532c7d)
-
-Add Project 11 Loom video link here.
